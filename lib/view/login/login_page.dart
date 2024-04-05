@@ -1,3 +1,4 @@
+import 'package:capstone_project/view/login/register.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
@@ -114,7 +115,15 @@ class _LoginPageState extends State<LoginPage> {
                               color: Color(0xFF47793C),
                               decoration: TextDecoration.underline,
                             ),
-                            recognizer: TapGestureRecognizer()..onTap = () {},
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const RegisterPage()),
+                                );
+                              },
                           ),
                         ],
                       ),
