@@ -1,3 +1,4 @@
+import 'package:capstone_project/view/login/forgotpassword1.dart';
 import 'package:capstone_project/view/login/register.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -84,7 +85,12 @@ class _LoginPageState extends State<LoginPage> {
                       vertical: 0.0, horizontal: 25.0),
                   alignment: Alignment.topRight,
                   child: TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return const ForgotPassword1();
+                      }));
+                    },
                     child: const Text(
                       'Forgot password?',
                       style: TextStyle(
