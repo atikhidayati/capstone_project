@@ -1,3 +1,4 @@
+import 'package:capstone_project/view/dashboard/dashboard_page.dart';
 import 'package:capstone_project/view/login/forgotpassword/forgotpassword1.dart';
 import 'package:capstone_project/view/login/register.dart';
 import 'package:flutter/gestures.dart';
@@ -107,7 +108,16 @@ class _LoginPageState extends State<LoginPage> {
                   children: <Widget>[
                     ButtonComponent(
                       title: "Login",
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const DashboardPage();
+                            },
+                          ),
+                        );
+                      },
                     ),
                     const SizedBox(height: 62),
                     Text.rich(
