@@ -45,6 +45,8 @@ dependencies:
   csc_picker: ^0.2.7
   intl_phone_field: ^3.2.0
   floating_bottom_navigation_bar: ^1.5.2
+  carousel_slider: 4.2.1
+  
   
 
 dev_dependencies:

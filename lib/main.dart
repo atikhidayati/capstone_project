@@ -1,3 +1,4 @@
+import 'package:capstone_project/view/dashboard/home_screen.dart';
 import 'package:capstone_project/view/onboarding/splash_screen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         useMaterial3: true,
       ),
-      home: const SplashScreen(),
+      home: const HomeScreen(),
     );
   }
 }

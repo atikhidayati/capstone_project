@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:capstone_project/view/widget/carousel_slider.dart';
 import 'package:capstone_project/view/widget/name_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -24,13 +25,42 @@ class _HomeScreenState extends State<HomeScreen> {
                 color: const Color(0xFf8bC342),
               ),
             ),
-            Column(
-              children: [
-                NameBar(name: HttpHeaders.authorizationHeader),
-              ],
-            ),
-            const SizedBox(
-              height: 20,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  const SizedBox(
+                    height: 10,
+                  ),
+                  Column(
+                    children: [
+                      NameBar(name: HttpHeaders.authorizationHeader),
+                    ],
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  TextField(
+                    decoration: const InputDecoration(
+                      fillColor: Colors.white,
+                      border: OutlineInputBorder(),
+                      focusedBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.black)),
+                      enabledBorder: OutlineInputBorder(
+                          borderSide: BorderSide(color: Colors.red)),
+                      filled: true,
+                      prefixIcon: Icon(Icons.search),
+                      hintText: 'Search',
+                    ),
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Carousel(),
+                ],
+              ),
             ),
           ],
         ),

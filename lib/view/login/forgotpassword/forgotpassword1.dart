@@ -1,3 +1,4 @@
+import 'package:capstone_project/view/login/forgotpassword/forgotpassword3.dart';
 import 'package:capstone_project/view/login/login_page.dart';
 import 'package:flutter/material.dart';
 
@@ -72,7 +73,16 @@ class ForgotPassword1 extends StatelessWidget {
                   const EdgeInsets.symmetric(vertical: 2.0, horizontal: 25.0),
               child: ButtonComponent(
                 title: "Get Code",
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const ForgotPassword3();
+                      },
+                    ),
+                  );
+                },
               ),
             ),
             Container(
