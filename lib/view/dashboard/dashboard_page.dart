@@ -57,16 +57,13 @@ class _DashboardPageState extends State<DashboardPage> {
             icon: Icons.home,
           ),
           FloatingNavbarItem(
-            icon: Icons.bookmark,
+            icon: Icons.explore,
           ),
           FloatingNavbarItem(
-            icon: Icons.location_pin,
+            icon: Icons.feed,
           ),
           FloatingNavbarItem(
-            icon: Icons.payment_rounded,
-          ),
-          FloatingNavbarItem(
-            icon: Icons.person,
+            icon: Icons.person_2_outlined,
           ),
         ],
       ),

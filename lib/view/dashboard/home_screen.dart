@@ -1,7 +1,9 @@
 import 'dart:io';
 
 import 'package:capstone_project/view/widget/carousel_slider.dart';
+import 'package:capstone_project/view/widget/menu_home.dart';
 import 'package:capstone_project/view/widget/name_bar.dart';
+import 'package:capstone_project/view/widget/searchbar.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -26,7 +28,7 @@ class _HomeScreenState extends State<HomeScreen> {
               ),
             ),
             Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20),
+              padding: const EdgeInsets.symmetric(horizontal: 10),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -42,23 +44,15 @@ class _HomeScreenState extends State<HomeScreen> {
                   const SizedBox(
                     height: 8,
                   ),
-                  TextField(
-                    decoration: const InputDecoration(
-                      fillColor: Colors.white,
-                      border: OutlineInputBorder(),
-                      focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.black)),
-                      enabledBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: Colors.red)),
-                      filled: true,
-                      prefixIcon: Icon(Icons.search),
-                      hintText: 'Search',
-                    ),
-                  ),
+                  Search(),
                   const SizedBox(
                     height: 8,
                   ),
                   Carousel(),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  MenuHome(),
                 ],
               ),
             ),
