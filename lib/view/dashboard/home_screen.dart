@@ -1,19 +1,16 @@
 import 'dart:io';
 
+import 'package:capstone_project/view/widget/card_paket_wisata.dart';
 import 'package:capstone_project/view/widget/carousel_slider.dart';
 import 'package:capstone_project/view/widget/menu_home.dart';
 import 'package:capstone_project/view/widget/name_bar.dart';
 import 'package:capstone_project/view/widget/searchbar.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class HomeScreen extends StatelessWidget {
+  const HomeScreen({Key? key}) : super(key: key);
 
-  @override
-  State<HomeScreen> createState() => _HomeScreenState();
-}
-
-class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,6 +50,28 @@ class _HomeScreenState extends State<HomeScreen> {
                     height: 8,
                   ),
                   MenuHome(),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'Paket Wisata Terbaik',
+                    style: GoogleFonts.inter(
+                        textStyle: const TextStyle(
+                            color: Color(0xFF222222),
+                            fontWeight: FontWeight.w600,
+                            fontSize: 16)),
+                  ),
+                  SizedBox(
+                      height: 200,
+                      child: ListView.builder(
+                          itemCount: 20,
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            return CardPackages(
+                              img:
+                                  'https://c4.wallpaperflare.com/wallpaper/210/493/172/landscape-photography-of-green-mountains-during-day-time-wallpaper-preview.jpg',
+                            );
+                          }))
                 ],
               ),
             ),

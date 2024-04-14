@@ -12,7 +12,7 @@ class MenuHome extends StatelessWidget {
 
   List<Icon> catIcons = [
     Icon(
-      Icons.bus_alert,
+      Icons.car_repair,
       color: Color.fromRGBO(70, 150, 76, 1),
       size: 25,
     ),
@@ -32,7 +32,7 @@ class MenuHome extends StatelessWidget {
       size: 25,
     ),
     Icon(
-      Icons.scale_rounded,
+      Icons.newspaper,
       color: Color.fromRGBO(70, 150, 76, 1),
       size: 25,
     ),

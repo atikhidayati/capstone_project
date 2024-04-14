@@ -1,7 +1,6 @@
 import 'package:capstone_project/view/dashboard/account_screen.dart';
 import 'package:capstone_project/view/dashboard/home_screen.dart';
 import 'package:capstone_project/view/dashboard/maps_screen.dart';
-import 'package:capstone_project/view/dashboard/payment_screen.dart';
 import 'package:capstone_project/view/dashboard/wishlish_screen.dart';
 import 'package:floating_bottom_navigation_bar/floating_bottom_navigation_bar.dart';
 import 'package:flutter/material.dart';
@@ -21,12 +20,10 @@ class _DashboardPageState extends State<DashboardPage> {
       case 0:
         return const HomeScreen();
       case 1:
-        return const WishlistScreen();
+        return const Explore();
       case 2:
-        return const MapsScreen();
+        return const Feature();
       case 3:
-        return const PaymentScreen();
-      case 4:
         return const AccountScreen();
       default:
         return const HomeScreen();
@@ -60,7 +57,7 @@ class _DashboardPageState extends State<DashboardPage> {
             icon: Icons.explore,
           ),
           FloatingNavbarItem(
-            icon: Icons.feed,
+            icon: Icons.menu_open,
           ),
           FloatingNavbarItem(
             icon: Icons.person_2_outlined,

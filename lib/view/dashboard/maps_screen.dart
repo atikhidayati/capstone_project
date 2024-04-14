@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class MapsScreen extends StatefulWidget {
-  const MapsScreen({super.key});
+class Feature extends StatefulWidget {
+  const Feature({super.key});
 
   @override
-  State<MapsScreen> createState() => _MapsScreenState();
+  State<Feature> createState() => _FeatureState();
 }
 
-class _MapsScreenState extends State<MapsScreen> {
+class _FeatureState extends State<Feature> {
   @override
   Widget build(BuildContext context) {
     return Scaffold();
