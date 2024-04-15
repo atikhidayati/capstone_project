@@ -8,6 +8,8 @@ import 'package:capstone_project/view/widget/searchbar.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../widget/card_event.dart';
+
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
@@ -56,22 +58,51 @@ class HomeScreen extends StatelessWidget {
                   Text(
                     'Paket Wisata Terbaik',
                     style: GoogleFonts.inter(
-                        textStyle: const TextStyle(
-                            color: Color(0xFF222222),
-                            fontWeight: FontWeight.w600,
-                            fontSize: 16)),
+                      textStyle: const TextStyle(
+                        color: Color(0xFF222222),
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                      ),
+                    ),
                   ),
                   SizedBox(
-                      height: 200,
-                      child: ListView.builder(
-                          itemCount: 20,
-                          scrollDirection: Axis.horizontal,
-                          itemBuilder: (context, index) {
-                            return CardPackages(
-                              img:
-                                  'https://c4.wallpaperflare.com/wallpaper/210/493/172/landscape-photography-of-green-mountains-during-day-time-wallpaper-preview.jpg',
-                            );
-                          }))
+                    height: 200,
+                    child: ListView.builder(
+                        itemCount: 20,
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          return CardPackages(
+                            img:
+                                'https://c4.wallpaperflare.com/wallpaper/210/493/172/landscape-photography-of-green-mountains-during-day-time-wallpaper-preview.jpg',
+                          );
+                        }),
+                  ),
+                  const SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'Rayakan Event Terbaik',
+                    style: GoogleFonts.inter(
+                      textStyle: const TextStyle(
+                        color: Color(0xFF222222),
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 200,
+                    child: ListView.builder(
+                      itemCount: 20,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return CardEvent(
+                          img:
+                              'https://c4.wallpaperflare.com/wallpaper/210/493/172/landscape-photography-of-green-mountains-during-day-time-wallpaper-preview.jpg',
+                        );
+                      },
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -98,6 +129,6 @@ class AppClipper extends CustomClipper<Path> {
 
   @override
   bool shouldReclip(covariant CustomClipper<Path> oldClipper) {
-    throw UnimplementedError();
+    return true;
   }
 }
