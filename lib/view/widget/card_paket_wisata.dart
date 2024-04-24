@@ -54,19 +54,33 @@ class _CardPackagesState extends State<CardPackages> {
                           isSaved = !isSaved;
                         });
                       },
-                      child: Icon(
-                        isSaved ? Icons.bookmark : Icons.bookmark_outline,
-                        color: isSaved ? const Color(0xFF477A3B) : null,
-                      ),
+                      child: isSaved
+                        ? Icon(
+                            Icons.bookmark,
+                            color: Color(0xFF477A3B),
+                          )
+                        : Icon(Icons.bookmark_outline, color: Color(0xFF477A3B),),
                     ),
                   ],
                 ),
-                const SizedBox(height: 15),
-                Text(
-                  'IDR 450.000 / Pax',
-                  style: GoogleFonts.inter(
-                    textStyle: const TextStyle(color: Colors.green),
-                  ),
+                const SizedBox(height: 10),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Text(
+                      'IDR 450.000 / Pax',
+                      style: GoogleFonts.inter(
+                          textStyle: const TextStyle(color: Color(0xFf8bC342)),
+                          fontSize: 12),
+                    ),
+                    SizedBox(width: 8),
+                    Text(
+                      '2 Hari 1 Malam',
+                      style: GoogleFonts.inter(
+                          textStyle: const TextStyle(color: Colors.grey),
+                          fontSize: 10),
+                    ),
+                  ],
                 )
               ],
             ),

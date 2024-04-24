@@ -18,8 +18,6 @@ class CardEvent extends StatefulWidget {
 class _CardEventState extends State<CardEvent> {
   bool isSaved = false;
 
-
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -95,16 +93,28 @@ class _CardEventState extends State<CardEvent> {
                             Icons.bookmark,
                             color: Color(0xFF477A3B),
                           )
-                        : Icon(Icons.bookmark_outline),
+                        : Icon(Icons.bookmark_outline, color: Color(0xFF477A3B),),
                   ),
                 ],
               ),
               const SizedBox(height: 15),
-              Text(
-                'IDR 450.000 / Pax',
-                style: GoogleFonts.inter(
-                  textStyle: const TextStyle(color: Colors.green),
-                ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'IDR 450.000 / Pax',
+                    style: GoogleFonts.inter(
+                        textStyle: const TextStyle(color: Color(0xFf8bC342)),
+                        fontSize: 12),
+                  ),
+                  SizedBox(width: 8),
+                  Text(
+                    '10 Agustus 2024',
+                    style: GoogleFonts.inter(
+                        textStyle: const TextStyle(color: Colors.grey),
+                        fontSize: 10),
+                  ),
+                ],
               )
             ],
           ),

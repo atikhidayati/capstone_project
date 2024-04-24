@@ -66,7 +66,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 200,
+                    height: 220,
                     child: ListView.builder(
                         itemCount: 20,
                         scrollDirection: Axis.horizontal,
@@ -91,7 +91,7 @@ class HomeScreen extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    height: 200,
+                    height: 220,
                     child: ListView.builder(
                       itemCount: 20,
                       scrollDirection: Axis.horizontal,
@@ -101,6 +101,19 @@ class HomeScreen extends StatelessWidget {
                               'https://c4.wallpaperflare.com/wallpaper/210/493/172/landscape-photography-of-green-mountains-during-day-time-wallpaper-preview.jpg',
                         );
                       },
+                    ),
+                  ),
+                  SizedBox(
+                    height: 8,
+                  ),
+                  Text(
+                    'Tempat Wisata Populer',
+                    style: GoogleFonts.inter(
+                      textStyle: const TextStyle(
+                        color: Color(0xFF222222),
+                        fontWeight: FontWeight.w600,
+                        fontSize: 16,
+                      ),
                     ),
                   ),
                 ],
