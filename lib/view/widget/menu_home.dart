@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class MenuHome extends StatelessWidget {
@@ -60,15 +61,17 @@ class MenuHome extends StatelessWidget {
               itemBuilder: (context, index) {
                 return Column(
                   children: [
-                    Container(
-                      height: 40,
-                      width: 40,
-                      decoration: BoxDecoration(
-                        color: Color.fromRGBO(224, 245, 180, 1),
-                        borderRadius: BorderRadius.circular(8),
-                      ),
-                      child: Center(
-                        child: catIcons[index],
+                    Flexible(
+                      child: Container(
+                        height: 40,
+                        width: 40,
+                        decoration: BoxDecoration(
+                          color: Color.fromRGBO(224, 245, 180, 1),
+                          borderRadius: BorderRadius.circular(8),
+                        ),
+                        child: Center(
+                          child: catIcons[index],
+                        ),
                       ),
                     ),
                     SizedBox(
