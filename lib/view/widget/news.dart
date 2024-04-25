@@ -36,10 +36,10 @@ class WonoNews extends StatelessWidget {
                   ),
                   Row(
                     children: [
-                      Text('Budaya Tengger Dalam Geliat Masyarakat\nLereng Gunung Bromo',
+                      Text('Budaya Tengger Dalam Geliat\nMasyarakat Lereng Gunung Bromo',
                     style: GoogleFonts.inter(
                       textStyle: const TextStyle(
-                          fontSize: 15, fontWeight: FontWeight.w600),
+                          fontSize: 14, fontWeight: FontWeight.w600),
                     ),
                         maxLines: 2,
                         overflow: TextOverflow.ellipsis,

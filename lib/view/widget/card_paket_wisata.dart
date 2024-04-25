@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:capstone_project/view/detail%20paket/detail_paket.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -17,6 +17,11 @@ class _CardPackagesState extends State<CardPackages> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: ((context) {
+          return const DetailPaket();
+        })));
+      },
       child: SizedBox(
         width: MediaQuery.of(context).size.width * 0.65,
         height: 200,
@@ -60,11 +65,14 @@ class _CardPackagesState extends State<CardPackages> {
                           });
                         },
                         child: isSaved
-                          ? Icon(
-                              Icons.bookmark,
-                              color: Color(0xFF477A3B),
-                            )
-                          : Icon(Icons.bookmark_outline, color: Color(0xFF477A3B),),
+                            ? Icon(
+                                Icons.bookmark,
+                                color: Color(0xFF477A3B),
+                              )
+                            : Icon(
+                                Icons.bookmark_outline,
+                                color: Color(0xFF477A3B),
+                              ),
                       ),
                     ],
                   ),
@@ -75,7 +83,8 @@ class _CardPackagesState extends State<CardPackages> {
                       Text(
                         'IDR 450.000 / Pax',
                         style: GoogleFonts.inter(
-                            textStyle: const TextStyle(color: Color(0xFf8bC342)),
+                            textStyle:
+                                const TextStyle(color: Color(0xFf8bC342)),
                             fontSize: 12),
                       ),
                       SizedBox(width: 8),

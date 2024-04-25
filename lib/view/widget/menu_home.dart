@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class MenuHome extends StatelessWidget {
   List catMenu = [
@@ -79,10 +79,12 @@ class MenuHome extends StatelessWidget {
                     ),
                     Text(
                       catMenu[index],
-                      style: TextStyle(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w500,
-                        color: Color.fromRGBO(70, 150, 76, 1),
+                      style: GoogleFonts.inter(
+                        textStyle: const TextStyle(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w500,
+                          color: Color.fromRGBO(70, 150, 76, 1),
+                        ),
                       ),
                     )
                   ],

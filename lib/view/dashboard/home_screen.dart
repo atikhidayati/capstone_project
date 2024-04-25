@@ -124,7 +124,6 @@ class HomeScreen extends StatelessWidget {
                   SizedBox(
                     height: 550,
                     child: ListView.builder(
-                      // harusnya pakai stream builder nanti pean atur aja pake stream builder biar real time, saya kayak di atas pokok nya di home ini pake stream bulider jangan listview builder
                       shrinkWrap: true,
                       physics: const NeverScrollableScrollPhysics(),
                       scrollDirection: Axis.vertical,
@@ -132,12 +131,14 @@ class HomeScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return const WisataPupuler(
                           img:
-                          'https://c4.wallpaperflare.com/wallpaper/210/493/172/landscape-photography-of-green-mountains-during-day-time-wallpaper-preview.jpg',
+                              'https://c4.wallpaperflare.com/wallpaper/210/493/172/landscape-photography-of-green-mountains-during-day-time-wallpaper-preview.jpg',
                         );
                       },
                     ),
                   ),
-                  SizedBox(height: 8,),
+                  SizedBox(
+                    height: 8,
+                  ),
                   Text(
                     'Wonokitri News',
                     style: GoogleFonts.inter(
@@ -156,7 +157,7 @@ class HomeScreen extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return WonoNews(
                           img:
-                          'https://www.goodnewsfromindonesia.id/uploads/images/2022/06/1515412022-shutterstock_15559627s76.jpg',
+                              'https://www.goodnewsfromindonesia.id/uploads/images/2022/06/1515412022-shutterstock_15559627s76.jpg',
                         );
                       },
                     ),
