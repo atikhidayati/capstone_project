@@ -1,3 +1,4 @@
+import 'package:capstone_project/view/detail%20paket/widget/cart_detail.dart';
 import 'package:capstone_project/view/detail%20paket/widget/icon_detail.dart';
 import 'package:capstone_project/view/detail%20paket/widget/menu_detail.dart';
 import 'package:flutter/cupertino.dart';
@@ -118,6 +119,15 @@ class _DetailPaketState extends State<DetailPaket> {
                     ),
                   ],
                 ),
+                SizedBox(
+                  height: 8,
+                ),
+                MenuDetail(),
+                SizedBox(
+                  height: 8,
+                ),
+                KotakDetail(),
+
               ],
             ),
           ),

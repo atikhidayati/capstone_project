@@ -34,11 +34,11 @@ class _IconDetailState extends State<IconDetail> {
           child: isSaved
               ? Icon(
                   Icons.favorite,
-                  color: Color(0xFF477A3B),
+                  color: Color(0xFf8bC342),
                 )
               : Icon(
                   Icons.favorite_outline,
-                  color: Color(0xFF477A3B),
+                  color: Color(0xFf8bC342),
                 ),
         ),
         SizedBox(width: 8), // Spacer
@@ -46,7 +46,7 @@ class _IconDetailState extends State<IconDetail> {
           onTap: () {},
           child: Icon(
             Icons.share,
-            color: Color(0xFF477A3B),
+            color: Color(0xFf8bC342),
           ),
         ),
       ],
