@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class ButtonComponent extends StatelessWidget {
   final String title;
@@ -30,10 +31,10 @@ class ButtonComponent extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: const TextStyle(
-              color: Colors.white,
+            style: GoogleFonts.inter(
+              textStyle: TextStyle(color: Colors.white),
               fontSize: 16,
-              fontWeight: FontWeight.w600,
+              fontWeight: FontWeight.bold,
             ),
           ),
         ),

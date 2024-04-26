@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class MenuDetail extends StatelessWidget {
-  const MenuDetail({Key? key});
+  final String title;
+  final IconData menuIcon; // Mengubah tipe data menjadi IconData
+
+  const MenuDetail({
+    Key? key,
+    required this.title,
+    required this.menuIcon,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -11,67 +18,13 @@ class MenuDetail extends StatelessWidget {
       children: <Widget>[
         Row(
           children: [
-            Icon(
-              Icons.location_on_outlined,
-              color: Color(0xFf8bC342),
+            Icon( // Menggunakan widget Icon untuk menampilkan ikon
+              menuIcon,
+              color: Color(0xFF8BC342), // Format warna menjadi 0xFF (RGBA)
             ),
             SizedBox(width: 8),
             Text(
-              'Desa Edelweis Wonokitri',
-              style: GoogleFonts.inter(
-                textStyle: TextStyle(color: Colors.black),
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
-        SizedBox(height: 8),
-        Row(
-          children: [
-            Icon(
-              Icons.access_time_rounded,
-              color: Color(0xFf8bC342),
-            ),
-            SizedBox(width: 8),
-            Text(
-              '1 Hari',
-              style: GoogleFonts.inter(
-                textStyle: TextStyle(color: Colors.black),
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
-        SizedBox(height: 8),
-        Row(
-          children: [
-            Icon(
-              Icons.shopping_cart,
-              color: Color(0xFf8bC342),
-            ),
-            SizedBox(width: 8),
-            Text(
-              '3 Kali Dipesan',
-              style: GoogleFonts.inter(
-                textStyle: TextStyle(color: Colors.black),
-                fontSize: 14,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
-        SizedBox(height: 8),
-        Row(
-          children: [
-            Icon(
-              Icons.translate,
-              color: Color(0xFf8bC342),
-            ),
-            SizedBox(width: 8),
-            Text(
-              'Tersedia dalam bahasa inggris',
+              title,
               style: GoogleFonts.inter(
                 textStyle: TextStyle(color: Colors.black),
                 fontSize: 14,

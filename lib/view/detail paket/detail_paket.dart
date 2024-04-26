@@ -1,7 +1,10 @@
 import 'package:capstone_project/view/detail%20paket/widget/cart_detail.dart';
+
 import 'package:capstone_project/view/detail%20paket/widget/icon_detail.dart';
 import 'package:capstone_project/view/detail%20paket/widget/menu_detail.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:capstone_project/view/detail%20paket/widget/text_detail.dart';
+import 'package:capstone_project/view/widget/button.dart';
+
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -53,7 +56,7 @@ class _DetailPaketState extends State<DetailPaket> {
                     _catPaket[_selectedImageIndex],
                     fit: BoxFit.fill,
                     height: MediaQuery.of(context).size.height * 0.3,
-                    width: MediaQuery.of(context).size.width * 0.9,
+                    width: MediaQuery.of(context).size.width * .6,
                   ),
                 ),
                 SizedBox(
@@ -108,26 +111,98 @@ class _DetailPaketState extends State<DetailPaket> {
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [TextDetail(title: 'IDR. 350.000')],
+                ),
+                SizedBox(
+                  height: 8,
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      'IDR. 350.000',
-                      style: GoogleFonts.inter(
-                        textStyle: const TextStyle(color: Color(0xFf8bC342)),
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                      ),
-                    ),
+                    MenuDetail(
+                        title: 'Desa Edelweis Wonokitri',
+                        menuIcon: Icons.location_on_outlined),
+                    MenuDetail(
+                        title: '1 Hari', menuIcon: Icons.access_time_rounded),
+                    MenuDetail(
+                        title: '3 Kali Dipesan', menuIcon: Icons.shopping_cart),
+                    MenuDetail(
+                        title: 'Terdesia dalam bahasa Inggris',
+                        menuIcon: Icons.translate),
                   ],
                 ),
                 SizedBox(
                   height: 8,
                 ),
-                MenuDetail(),
-                SizedBox(
-                  height: 8,
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    KotakDetail(title: 'Keluarga'),
+                    KotakDetail(title: 'Keluarga Kecil'),
+                    KotakDetail(title: 'Keluarga besar'),
+                  ],
                 ),
-                KotakDetail(),
-
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Informasi Detail',
+                      style: GoogleFonts.inter(
+                        textStyle: const TextStyle(color: Colors.black),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(''),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Harap Diperhatikan',
+                      style: GoogleFonts.inter(
+                        textStyle: const TextStyle(color: Colors.black),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text(''),
+                  ],
+                ),
+                SizedBox(
+                  height: 20,
+                ),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Informasi Tambahan',
+                      style: GoogleFonts.inter(
+                        textStyle: const TextStyle(color: Colors.black),
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                      ),
+                    ),
+                    Text('s'),
+                  ],
+                ),
+                Container(
+                  alignment: Alignment.bottomCenter,
+                  margin: const EdgeInsets.symmetric(
+                    vertical: 70,
+                  ),
+                  child: ButtonComponent(
+                    title: 'Beli Paket',
+                    onPressed: () {},
+                  ),
+                ),
               ],
             ),
           ),
