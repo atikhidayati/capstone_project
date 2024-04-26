@@ -1,8 +1,7 @@
-import 'package:capstone_project/view/detail%20paket/widget/cart_detail.dart';
-
-import 'package:capstone_project/view/detail%20paket/widget/icon_detail.dart';
-import 'package:capstone_project/view/detail%20paket/widget/menu_detail.dart';
-import 'package:capstone_project/view/detail%20paket/widget/text_detail.dart';
+import 'package:capstone_project/view/detail/widget/cart_detail.dart';
+import 'package:capstone_project/view/detail/widget/icon_detail.dart';
+import 'package:capstone_project/view/detail/widget/menu_detail.dart';
+import 'package:capstone_project/view/detail/widget/text_widget.dart';
 import 'package:capstone_project/view/widget/button.dart';
 
 import 'package:flutter/material.dart';
@@ -20,9 +19,9 @@ class _DetailPaketState extends State<DetailPaket> {
 
   final List<String> _catPaket = [
     'https://c4.wallpaperflare.com/wallpaper/210/493/172/landscape-photography-of-green-mountains-during-day-time-wallpaper-preview.jpg',
-    'https://www.goodnewsfromindonesia.id/uploads/images/2022/06/1515412022-shutterstock_15559627s76.jpg',
+    'https://i.pinimg.com/564x/59/b9/54/59b954761d1eb3fcbbbe534ea254bc90.jpg',
     'https://c4.wallpaperflare.com/wallpaper/210/493/172/landscape-photography-of-green-mountains-during-day-time-wallpaper-preview.jpg',
-    'https://www.goodnewsfromindonesia.id/uploads/images/2022/06/1515412022-shutterstock_15559627s76.jpg',
+    'https://i.pinimg.com/564x/59/b9/54/59b954761d1eb3fcbbbe534ea254bc90.jpg',
   ];
 
   @override
@@ -56,7 +55,7 @@ class _DetailPaketState extends State<DetailPaket> {
                     _catPaket[_selectedImageIndex],
                     fit: BoxFit.fill,
                     height: MediaQuery.of(context).size.height * 0.3,
-                    width: MediaQuery.of(context).size.width * .6,
+                    width: MediaQuery.of(context).size.width * 0.9,
                   ),
                 ),
                 SizedBox(
@@ -83,7 +82,7 @@ class _DetailPaketState extends State<DetailPaket> {
                             padding: EdgeInsets.all(8),
                             decoration: BoxDecoration(
                               border: Border.all(
-                                width: index == _selectedImageIndex ? 2 : 1,
+                                width: index == _selectedImageIndex ? 1 : 1,
                                 color: index == _selectedImageIndex
                                     ? Color(0xFF146ABE)
                                     : Colors.black26,
@@ -111,7 +110,7 @@ class _DetailPaketState extends State<DetailPaket> {
                 ),
                 Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [TextDetail(title: 'IDR. 350.000')],
+                  children: [TextWidget(title: 'IDR. 350.000')],
                 ),
                 SizedBox(
                   height: 8,
@@ -190,7 +189,7 @@ class _DetailPaketState extends State<DetailPaket> {
                         fontWeight: FontWeight.w600,
                       ),
                     ),
-                    Text('s'),
+                    Text(''),
                   ],
                 ),
                 Container(

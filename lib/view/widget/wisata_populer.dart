@@ -1,3 +1,5 @@
+
+import 'package:capstone_project/view/detail/detail_wisata.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,7 +15,9 @@ class WisataPupuler extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        Navigator.pushNamed(context, '/detail_homestay');
+        Navigator.push(context, MaterialPageRoute(builder: ((context) {
+          return const DetailWisata();
+        })));
       },
       child: SizedBox(
         width: MediaQuery.of(context).size.width,

@@ -18,16 +18,16 @@ class MenuDetail extends StatelessWidget {
       children: <Widget>[
         Row(
           children: [
-            Icon( // Menggunakan widget Icon untuk menampilkan ikon
+            Icon(
               menuIcon,
-              color: Color(0xFF8BC342), // Format warna menjadi 0xFF (RGBA)
+              color: Color(0xFF8BC342),
             ),
             SizedBox(width: 8),
             Text(
               title,
               style: GoogleFonts.inter(
                 textStyle: TextStyle(color: Colors.black),
-                fontSize: 14,
+                fontSize: 12,
                 fontWeight: FontWeight.w500,
               ),
             ),
