@@ -1,3 +1,4 @@
+import 'package:capstone_project/view/detail/detail_news.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -9,6 +10,11 @@ class WonoNews extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: () {
+        Navigator.push(context, MaterialPageRoute(builder: ((context) {
+          return const DetailNews();
+        })));
+      },
       child: SizedBox(
         height: 220,
         child: Card(
@@ -21,7 +27,7 @@ class WonoNews extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Expanded(child: Container(
-                    width: MediaQuery.of(context).size.width * 0.6,
+                    width: MediaQuery.of(context).size.width * 0.7,
                     height: MediaQuery.of(context).size.height * 0.3,
                     decoration: BoxDecoration(
                       image: DecorationImage(image: NetworkImage(img),
@@ -35,6 +41,7 @@ class WonoNews extends StatelessWidget {
                     height: 2,
                   ),
                   Row(
+
                     children: [
                       Text('Budaya Tengger Dalam Geliat\nMasyarakat Lereng Gunung Bromo',
                     style: GoogleFonts.inter(

@@ -1,3 +1,4 @@
+import 'package:capstone_project/view/daftar_tiket.dart';
 import 'package:capstone_project/view/detail/widget/cart_detail.dart';
 import 'package:capstone_project/view/detail/widget/icon_detail.dart';
 import 'package:capstone_project/view/detail/widget/menu_detail.dart';
@@ -51,11 +52,18 @@ class _DetailPaketState extends State<DetailPaket> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  child: Image.network(
-                    _catPaket[_selectedImageIndex],
-                    fit: BoxFit.fill,
-                    height: MediaQuery.of(context).size.height * 0.3,
+                  child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage(
+                          _catPaket[_selectedImageIndex],
+                        ),
+                        fit: BoxFit.fill,
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
                 ),
                 SizedBox(
@@ -199,7 +207,12 @@ class _DetailPaketState extends State<DetailPaket> {
                   ),
                   child: ButtonComponent(
                     title: 'Beli Paket',
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) {
+                        return const DaftarTiket();
+                      }));
+                    },
                   ),
                 ),
               ],

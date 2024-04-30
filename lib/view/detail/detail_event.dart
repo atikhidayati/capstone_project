@@ -51,11 +51,16 @@ class _DetailEventState extends State<DetailEvent> {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  child: Image.network(
-                    _catPaket[_selectedImageIndex],
-                    fit: BoxFit.fill,
-                    height: MediaQuery.of(context).size.height * 0.3,
+                  child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage(_catPaket[_selectedImageIndex],),
+                        fit: BoxFit.fill,
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
                 ),
                 SizedBox(

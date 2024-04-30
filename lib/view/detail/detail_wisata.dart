@@ -22,6 +22,13 @@ class DetailWisata extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          color: Colors.black,
+          onPressed: () => Navigator.pop(context),
+        ),
         title: Text(
           'Details',
           style: GoogleFonts.inter(
@@ -30,10 +37,6 @@ class DetailWisata extends StatelessWidget {
             fontWeight: FontWeight.w600,
           ),
         ),
-        leading: BackButton(),
-        backgroundColor: Colors.transparent,
-        foregroundColor: Colors.black,
-        elevation: 0,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -45,11 +48,18 @@ class DetailWisata extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Container(
-                  child: Image.network(
-                    _catPaket[_selectedImageIndex],
-                    fit: BoxFit.fill,
-                    height: MediaQuery.of(context).size.height * 0.3,
+                  child: Container(
                     width: MediaQuery.of(context).size.width * 0.9,
+                    height: MediaQuery.of(context).size.height * 0.3,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        image: NetworkImage(
+                          _catPaket[_selectedImageIndex],
+                        ),
+                        fit: BoxFit.fill,
+                      ),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
                   ),
                 ),
                 SizedBox(

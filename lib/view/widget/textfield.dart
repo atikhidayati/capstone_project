@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:intl_phone_field/intl_phone_field.dart';
 
 class CustomTextField extends StatelessWidget {
@@ -23,10 +24,10 @@ class CustomTextField extends StatelessWidget {
         children: <Widget>[
           Text(
             title,
-            style: const TextStyle(
+            style: GoogleFonts.inter(
+              textStyle: const TextStyle(color: Colors.black),
               fontSize: 16,
-              fontWeight: FontWeight.w500,
-              color: Color(0xFF222222),
+              fontWeight: FontWeight.w600,
             ),
           ),
           const SizedBox(height: 8),
@@ -84,10 +85,10 @@ class _PasswordTextFieldState extends State<PasswordTextField> {
         children: <Widget>[
           Text(
             widget.title,
-            style: const TextStyle(
+            style: GoogleFonts.inter(
+              textStyle: const TextStyle(color: Colors.black),
               fontSize: 16,
-              fontWeight: FontWeight.w500,
-              color: Color(0xFF222222),
+              fontWeight: FontWeight.w600,
             ),
           ),
           const SizedBox(height: 8),
@@ -131,10 +132,10 @@ class Customphone extends StatelessWidget {
         children: <Widget>[
           Text(
             title,
-            style: const TextStyle(
+            style: GoogleFonts.inter(
+              textStyle: const TextStyle(color: Colors.black),
               fontSize: 16,
-              fontWeight: FontWeight.w500,
-              color: Color(0xFF222222),
+              fontWeight: FontWeight.w600,
             ),
           ),
           const SizedBox(height: 8),
